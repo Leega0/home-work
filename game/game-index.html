@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <meta name="keywords" content="猪猪钱罐">
+    <meta name="description" content="猪猪钱罐">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telphone=no, email=no"/>
+    <meta name="HandheldFriendly" content="true">
+    <title>我的财富报告</title>
+    <link rel="stylesheet" href="../style/game-03-17.min.css">
+</head>
+<body class="blue-body">
+	<div class="game-container">
+		<div class="content-seat">
+		<!-- 我的获奖记录 -->
+		<a href="#" class="ui-link to-myrecord">我的获奖记录</a>
+		</div>
+		<a class="btn-welcom-start" href="#" id="nochance"></a>
+	</div>
+	<!-- 机会已用完 -->
+  <div class="lottery-award-dialog ui-hide">
+    <img src="../images/game-03-17/alert-hanmer.png" class="lottery-def-img" id="lottery_def_img">
+    <p id="lottery_award_content">您今天的游戏机会已用完，分享此
+活动到朋友圈可再玩1次（每天上
+限5次）</p>
+    <div class="ui-dialog-btnWrap">
+      <a href="javascript:void(0);" class="ui-btn ui-btn-know ui-dialog-btn-submit"></a>
+    </div>
+  </div>
+</body>
+	<script src="../js/lib/zepto.min.js"></script>
+	<script src="../js/common.js"></script>
+	<script>
+		$("#nochance").on('tap',function(){
+			$.dialog('.lottery-award-dialog', {
+                isBtn: false
+              });
+		})
+	</script>
+</html>

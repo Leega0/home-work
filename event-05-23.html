@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  <meta name="keywords" content="猪猪钱罐">
+  <meta name="description" content="猪猪钱罐">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telphone=no, email=no"/>
+  <meta name="HandheldFriendly" content="true">
+  <title>天天抽大奖,存钱加机会</title>
+  <link rel="stylesheet" type="text/css" href="style/event-05-23.min.css">
+  <script src="js/lib/jquery.min.js"></script>
+  <script src="js/event-01-25-loading.js"></script>
+</head>
+<body>
+  <div id="loading">
+    <img src="images/loading-image.gif" alt="">
+  </div>
+
+<div id="stage" class="ui-hide">
+<div class="animate-container">
+  <section class="animate-top">
+    <img src="images/event-05-23/top-title.png" alt="" class="top-title">
+  </section>
+  <section class="animate-zhuzhu">
+    <img src="images/event-05-23/zhuzhu.png" alt="" class="img-zhuzhu">
+  </section>
+  <div class="task-list">
+    <section class="animate-task-one">
+    <img src="images/event-05-23/task-one.png" alt="" class="task-one task-img">
+    <img src="images/event-05-23/spimg-3000.png" alt="" class="task-status">
+  </section>
+  <section class="animate-task-two">
+    <img src="images/event-05-23/task-two.png" alt="" class="task-two task-img">
+    <img src="images/event-05-23/spimg-3000.png" alt="" class="task-status">
+  </section>
+  <section class="animate-task-three">
+    <img src="images/event-05-23/task-three.png" alt="" class="task-three task-img">
+    <img src="images/event-05-23/spimg-5000.png" alt="" class="task-status">
+  </section>
+  <section class="animate-task-four">
+    <img src="images/event-05-23/task-four.png" alt="" class="task-four task-img">
+    <img src="images/event-05-23/spimg-tickets.png" alt="" class="task-status">
+  </section>
+  <section class="animate-task-five">
+    <img src="images/event-05-23/task-five.png" alt="" class="task-five task-img">
+    <img src="images/event-05-23/spimg-c.png" alt="" class="task-status">
+  </section>
+  </div>
+  <!-- rule -->
+  <section class="animate-rule">
+    <img src="images/event-05-23/rule.png" alt="">
+  </section>
+  <section class="animate-btn">
+    <a href="" class="btn-goback"></a>
+  </section>
+</div>
+</div>
+<script type="text/javascript" src="js/lib/velocity.min.js"></script>
+<script type="text/javascript" src="js/lib/velocity.ui.min.js"></script>
+<script>
+// 修复只引用jquery时 按钮无acitve效果
+document.body.addEventListener('touchstart', function () {}); 
+// 背景图撑开
+    $(".animate-container").css('min-height', $(window).height());
+    // 获取各个动画元素
+    var $animateTop = $(".animate-top"),
+    $animateZhuzhu=$(".animate-zhuzhu"),
+    $animateTaskOne=$(".animate-task-one"),
+    $animateTaskTwo=$(".animate-task-two"),
+    $animateTaskThree=$(".animate-task-three"),
+    $animateTaskFour=$(".animate-task-four"),
+    $animateTaskFive=$(".animate-task-five"),
+    $animateRule = $(".animate-rule"),
+    $animateBtn = $(".animate-btn");
+    // 动画执行序列
+    var mySequenceTop = [
+    { e: $animateTop, p: { opacity:1 }, o: { duration: 500 } },
+    { e: $animateTop, p: { top: "0.85rem" }, o: { duration: 1000 } },
+    {e:$animateZhuzhu,p:{opacity:1},o:{easing:"swing",delay:0,duration: 300,sequenceQueue: false}},
+    {e:$animateZhuzhu,p:{opacity:0},o:{easing:"swing",duration: 800,sequenceQueue: false}},
+    {e:$animateZhuzhu,p:{opacity:1},o:{easing:"swing",duration: 300,sequenceQueue: false}},
+    {e:$animateTaskOne,p:{translateX:"-110%"},o:{delay:0,duration: 0}},
+    {e:$animateTaskOne,p:{translateX:0},o:{duration: 300}},
+    {e:$animateTaskTwo,p:{ translateX:"-110%"},o:{duration: 0}},
+    {e:$animateTaskTwo,p:{ translateX:0},o:{duration: 300}},
+    {e:$animateTaskThree,p:{ translateX:"-110%"},o:{duration:0}},
+    {e:$animateTaskThree,p:{ translateX:0},o:{duration: 300}}
+];
+    $.Velocity.RunSequence(mySequenceTop);
+    var mySequenceBottom = [
+      {e:$animateTaskFour,p:{ translateX:"110%"},o:{delay:0,duration:0}},
+      {e:$animateTaskFour,p:{ translateX:0},o:{delay:0,duration: 300}},
+      {e:$animateTaskFive,p:{ translateX:"110%"},o:{delay:0,duration:0}},
+      {e:$animateTaskFive,p:{ translateX:0},o:{delay:0,duration: 300}},
+      {e:$animateRule,p:{opacity:1},o: { duration: 500 }},
+      {e:$animateBtn,p:{opacity:1},o: { duration: 500 }}
+    ];
+    var ontime = true;
+    function nextAnim(){
+      if ($(document).scrollTop()>100) {
+            $.Velocity.RunSequence(mySequenceBottom);
+        }
+    }
+    $(document).scroll(function() {
+      if(ontime){
+        setTimeout(nextAnim,100);ontime = false;
+      }
+    });
+</script>
+</body>
+</html>

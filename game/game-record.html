@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  <meta name="keywords" content="猪猪钱罐">
+  <meta name="description" content="猪猪钱罐">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telphone=no, email=no"/>
+  <meta name="HandheldFriendly" content="true">
+  <title>我的中奖记录</title>
+  <link rel="stylesheet" href="../style/game-03-17.min.css">
+</head>
+<body class="blue-body">
+<!-- 我的获奖记录 -->
+<div class="lottery-record-bg">
+<div class="my-award-record">
+    <div class="scroll-container" id="scrollable">
+    <ul class="record-list">
+      <li>
+          <span>1000元金币</span>
+          <span>03-30 15:40:15</span>
+      </li>
+      <li>
+          <span>500元金币</span>
+          <span>03-30 15:40:15</span>
+      </li>
+      <li>
+          <span>1000元金币</span>
+          <span>03-30 15:40:15</span>
+      </li>
+      <li>
+          <span>1000元金币</span>
+          <span>03-30 15:40:15</span>
+      </li>
+      <li>
+          <span>500元金币</span>
+          <span>03-30 15:40:15</span>
+      </li>
+      <li>
+          <span>500元金币</span>
+          <span>03-30 15:40:15</span>
+      </li>
+      <li>
+          <span>500元金币</span>
+          <span>03-30 15:40:15</span>
+      </li>
+      <li>
+          <span>500元金币</span>
+          <span>03-30 15:40:15</span>
+      </li>
+      <li>
+          <span>1000元金币</span>
+          <span>03-30 15:40:15</span>
+      </li>
+      <li>
+          <span>1000元金币</span>
+          <span>03-30 15:40:15</span>
+      </li>
+      <li>
+          <span>1000元金币</span>
+          <span>03-30 15:40:15</span>
+      </li>
+      <li>
+          <span>1000元金币</span>
+          <span>03-30 15:40:15</span>
+      </li>
+      <li>
+          <span>1000元金币</span>
+          <span>03-30 15:40:15</span>
+      </li>
+      <li>
+          <span>1000元金币</span>
+          <span>03-30 15:40:15</span>
+      </li>
+      <li>
+          <span>1000元金币</span>
+          <span>03-30 15:40:15</span>
+      </li>
+      
+    </ul>
+    </div>
+</div>
+</div>
+</body>
+<script src="../js/lib/zepto.min.js"></script>
+<script type="text/javascript">
+var ScrollFix = function(elem) {
+  var startY, startTopScroll;
+  elem = elem || document.querySelector(elem);
+  if(!elem)
+    return;
+  elem.addEventListener('touchstart', function(event){
+    startY = event.touches[0].pageY;
+    startTopScroll = elem.scrollTop; 
+    if(startTopScroll <= 0)
+      elem.scrollTop = 1;
+    if(startTopScroll + elem.offsetHeight >= elem.scrollHeight)
+      elem.scrollTop = elem.scrollHeight - elem.offsetHeight - 1;
+  }, false);
+};
+var scrollable = document.getElementById("scrollable");
+    new ScrollFix(scrollable);
+  </script>
+</html>

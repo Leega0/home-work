@@ -1,0 +1,88 @@
+@import "variables";
+@import "function";
+@import "reset";
+@import "base";
+#loading{
+	position: absolute;
+	z-index:999;
+	width:102px;
+	height:37px;
+	left:50%;
+	top:50%;
+	margin-left: -51px;
+	margin-top: -19px;
+	img{
+		width: 100%;
+	}
+}
+body{
+	background: #535252;
+}
+.animate-container{
+	background:url("../images/event-05-23/top-imgbg.png") no-repeat;
+	background-size:100%;
+	max-width:640px;
+	margin:0 auto;
+	position: relative;
+	overflow:hidden;
+}
+.animate-top{
+	opacity:0;
+	position: absolute;
+	top:80%;
+	z-index:99;
+}
+.top-title{
+	width:100%;
+}
+.animate-zhuzhu{
+	width:14.125rem;
+	margin:3.25rem auto 0;
+	opacity:0;
+	img{
+		width: 100%;
+	}
+}
+.task-list{
+	margin:0 1.25rem;
+	section{
+		position: relative;
+		transform: translateX(-110%);
+	}
+	img{
+		&.task-img{
+			width: 100%;
+		}
+		&.task-status{
+			position: absolute;
+			width: 4.5rem;
+			z-index: 9;
+			right: 1.85rem;
+			top: -.625rem;
+		}
+	}
+}
+.animate-rule{
+	margin:0 5px;
+	opacity:0;
+	img{
+		width: 100%;
+	}
+}
+.animate-btn{
+	opacity:0;
+	text-align:center;
+	padding-top: .25rem;
+	padding-bottom: .5rem;
+	a{
+		display: inline-block;
+		width: 18.5rem;
+		height: 4.625rem;
+		background: url(../images/event-05-23/btn-back.png) no-repeat;
+		background-size:100%;
+		&:active{
+			position: relative;
+			top:2px;
+		}
+	}
+}

@@ -1,0 +1,317 @@
+.account-top {
+  padding: 1rem;
+  background-color: colors(main);
+  color: #fff;
+  position: relative;
+
+  .account-setting {
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    background-image: url('../images/icon-png/set.png');
+    background-repeat: no-repeat;
+    -webkit-background-size: 1rem;
+    background-size: 1rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+  .account-totalIncome-title {
+    font-size: .75rem;
+    text-align: center;
+  }
+  .account-totalIncome-count {
+    padding: .5em 0;
+    font-size: 3.125rem;
+    text-align: center;
+    border-bottom: 1px solid #e24252;
+  }
+
+  .account-info {
+    padding-top: 1rem;
+    position: relative;
+    @include displayFlex();
+    display: -webkit-box;
+  }
+  .account-total,
+  .account-prize {
+    display: block;
+    @include flex();
+    -webkit-box-flex: 1;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 10;
+  }
+  .account-prize {
+    text-align: right;
+    //border-left: 1px solid #e24252;
+  }
+
+  .account-info-title {
+    padding-bottom: .5rem;
+    font-size: .625em;
+    opacity: .5;
+  }
+  .account-info-count {
+    font-size: 1.5625rem;
+
+    i {
+      display: inline-block;
+      margin-bottom: .5em;
+      width: .3rem;
+      height: .3rem;
+      background-color: #fff;
+      border-radius: 50%;
+    }
+  }
+}
+
+.account-gift,
+.account-item {
+  @extend %clearfix;
+  display: block;
+  margin-bottom: .5rem;
+  padding: 1rem .6rem;
+  background-color: #fff;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, .15);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .15);
+  position: relative;
+
+  &:active {
+    background-color: #e2e2e2;
+  }
+}
+.account-event-mark {
+  display: block;
+  width: 3rem;
+  position: absolute;
+  top: .5rem;
+  right: 0;
+}
+.account-item-img {
+  float: left;
+  margin-right: .8rem;
+  width: 3rem;
+}
+.account-item-left {
+  float: left;
+}
+.account-item-right {
+  float: right;
+  text-align: right;
+}
+
+.account-item-title {
+  @extend %overflow-clip;
+  padding-top: .2em;
+  width: 7rem;
+  font-size: 1rem;
+  color: colors(main-font);
+}
+.account-item-title-wide {
+  width: 12rem;
+}
+.account-item-title-middle {
+  padding-top: 1rem;
+}
+.account-item-end {
+  padding-top: .8em;
+  font-size: .625rem;
+  color: colors(assist-font);
+}
+.account-item-count {
+  font-size: 1.3125rem;
+  color: colors(main-font);
+}
+.account-item-subtext {
+  padding-top: .5em;
+  font-size: .75rem;
+  color: colors(assist-font);
+}
+.account-item-subtext-bottom {
+  padding-top: 1.5rem;
+}
+.account-item-create {
+  padding-top: .6rem;
+  font-size: 1.3125rem;
+  color: colors(main);
+}
+.account-progress {
+  padding-top: 1rem;
+  width: 100%;
+
+  .account-progress-wrap {
+    margin-bottom: .5rem;
+    width: 100%;
+    height: 2px;
+    background-color: colors(background);
+  }
+  .account-progress-bar {
+    width: 0;
+    height: 100%;
+    background-color: colors(main);
+  }
+  .account-progress-value {
+    @extend %clearfix;
+    font-size: .75rem;
+    color: colors(main);
+  }
+}
+
+.account-progress-full {
+  .account-progress-bar {
+    background-color: colors(main);
+  }
+  .account-progress-value {
+    color: colors(main);
+  }
+}
+
+.account-tools {
+  padding-top: .5rem;
+  padding-bottom: 2rem;
+
+  .account-rules {
+    float: left;
+    padding-top: .2rem;
+    width: 51%;
+    text-align: center;
+  }
+}
+
+.account-nav {
+  height: .75rem;
+  padding: 1rem 0;
+
+  li {
+    float: left;
+    width: 25%;
+    font-size: .75rem;
+    text-align: center;
+    color: #919191;
+  }
+}
+
+.account-event-img {
+  display: block;
+  margin-left: -2.5rem;
+  width: 5rem;
+  position: absolute;
+  bottom: -1.285rem;
+  left: 50%;
+  z-index: 11;
+  opacity: 0.9;
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+// 临时样式--月度报告
+.month-dialog{
+  display: none;
+  overflow: hidden;
+  position: relative;
+  top: -3rem;
+  .month-intro{
+    position: absolute;
+    width: 100%;
+    bottom: 1.65rem;
+    z-index: 9;
+    text-align: center;
+  }
+}
+.month-dialog-bg{
+  background: url("../images/event-04-28/bg-repeat.png");
+  .ui-dialog-close{
+      background:url(../images/event-04-28/btn-close.png) no-repeat;
+      background-size:100%;
+    }
+  .layer-img{
+    img{
+      display: block;
+      width: 100%;
+    }
+  }
+  .btn-check-month{
+    display: block;
+    box-sizing:border-box;
+    position: relative;
+    top: -1rem;
+    margin:0 auto;
+    background: url(../images/event-04-28/btn-check-month.png) no-repeat;
+    background-size:200% 100%;
+    width:100%;
+    height:3.45rem;
+    &:active{
+      background-position: right;
+    }
+  }
+}
+// 公告样式
+@keyframes imgscal{
+  to{
+      transform: scale(1.2);
+  }
+}
+.notice-list-container{
+  overflow: hidden;
+  padding:0 1rem;
+  height: 1.5rem;
+  ul{
+    float: left;
+    width: 90%;
+  }
+  li{
+    a{
+      display: block;
+      height: 1.5rem;
+    }
+  }
+  .n-icon-img{
+    font-size: 0;
+    line-height: 1.5rem;
+    img{
+      width: 0.84rem;
+      vertical-align: middle;
+      &.speaker{
+        animation:imgscal 800ms steps(2,end) infinite;
+      }
+    }
+  }
+  .notice-text{
+       font-size: .75rem;
+       line-height: 1.5rem;
+       color: colors(main-font);
+       padding-left: .5rem;
+       display: inline-block;
+       float: left;
+    }
+}
+.account-banner-wrap{
+  .title{
+    text-align: center;
+    height: 1rem;
+    line-height: 1rem;
+    background: linear-gradient(transparent 0.5rem,#d2d2d2 0.6rem,transparent 0);
+    margin-bottom: .5rem;
+    span{
+      font-size: .75rem;
+      color: colors(sub-font);
+      background-color: colors(background);
+      padding:0 .75rem;
+    }
+  }
+  .banner-list{
+    li{
+      padding:.35rem 0;
+    }
+    a{
+      display: block;
+      img{
+        display: block;
+        width: 100%;
+        border-radius:2px;
+      }
+    }
+  }
+}

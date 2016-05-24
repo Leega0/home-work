@@ -1,0 +1,339 @@
+@import "variables";
+@import "function";
+@import "reset";
+@import "base";
+// 矩阵背景
+@mixin polka($size, $dot, $base, $accent) {
+    background: $base;
+    background-image:
+        radial-gradient($accent $dot, transparent 0),
+        radial-gradient($accent $dot, transparent 0);
+    background-size: $size $size;
+    background-position: 0 0, $size/2 $size/2;
+}
+
+.lottery_btn{
+	background-image:url(../images/event-05-17/lottery-btn.png);
+	background-repeat: no-repeat;
+	background-size:96%;
+	background-position: 0% 50%;
+	&:active{
+		background-position: 0% 100%;
+	}
+}
+.bottery_btn_df{
+	background-image:url(../images/event-05-17/lottery-btn.png);
+	animation:tapchange 1s steps(2) infinite
+}
+@keyframes tapchange{
+	from{
+		background-position:0 0;
+	}
+	to{
+		background-position:0 100%;
+	}
+}
+.lottery-top-bg{
+	@include polka(0.8rem, 10%, #3fc0c2, rgba(0,0,0,.25));
+}
+.lottery-head-img{
+	padding:0.5rem 0.5rem 0;
+	img{
+		display: block;
+		width: 100%;
+	}
+}
+.prize-lotter-gray{
+	li{
+		img{
+			filter:grayscale(100%);
+			&.nogray{
+				filter:grayscale(0%);
+			}
+		}
+	}
+}
+.prize-lotter{
+	margin:0 auto;
+	width:19rem;
+	height:19rem;
+    box-sizing:border-box;
+    padding: 0.36rem;
+	li{
+		float: left;
+		width: 5.75rem;
+		height: 5.75rem;
+		margin: 0.175rem;
+		&:nth-child(3n+3){
+			margin-right: 0;
+		}
+		position: relative;
+		img,a{
+			display: block;
+			width: 100%;
+			height: 100%
+		}
+	}
+}
+.prize-lotter-shadow{
+	background-color: #fff;
+	width:100%;
+	height:100%;
+	opacity:0.5;
+	position: absolute;
+	top:0;
+	border-radius:0.4rem;
+}
+// 弹窗
+.ui-dialog{
+	background: url(../images/event-05-17/layer-bg.png) no-repeat;
+	background-size:100% 100%;
+	.ui-dialog-close{
+		background-image: url("../images/icon-png/close-black.png");
+		right: 1.35rem;
+		top: 1.35rem;
+	}
+}
+.lottery-img{
+	padding:1rem;
+	img{
+		display: block;
+		margin-top: .675rem;
+		width: 100%;
+	}
+}
+.ui-dialog-btnWrap{
+	margin-bottom: .4rem;
+	border-top:0;
+}
+.ui-dialog-success{
+	.ui-btn{
+		background: url(../images/event-05-17/btn-use.png) no-repeat;
+		background-size:100%;
+		min-height: 3.75rem;
+		&:active{
+			position: relative;
+			top: 0.15rem;
+			border:0;
+		}
+	}
+}
+.ui-dialog-fail{
+	.ui-btn{
+		background: url(../images/event-05-17/btn-know.png) no-repeat;
+		background-size:100%;
+		min-height: 3.75rem;
+		&:active{
+			position: relative;
+			top: 0.15rem;
+			border:0;
+		}
+	}
+}
+#lottery_award_content{
+	font-size: 0.7rem;
+	line-height: 1.8;
+}
+.lottery-award-info{
+	position: relative;
+	bottom:-0.3rem;
+}
+.lottery-award-tree{
+	width:85%;
+	margin:0 auto;
+	img{
+		display: block;
+		width: 100%;
+	}
+}
+.lottery-award-treeb{
+	padding:0 1.5rem;
+    height: 2rem;
+    border:0.2rem solid #28281e;
+    background-color: #feeada;
+    position: relative;
+	top:-0.15rem;
+	width: 98%;
+	margin: 0 auto;
+	box-sizing:border-box;
+}
+.lottery-award-users{
+    width: 100%;
+	overflow: hidden;
+}
+.lottery-scroll{
+	overflow: hidden;
+	width:1000rem;
+	height:0.8rem;
+	text-align:left;
+	padding-top: 0.5rem;
+}
+.award-users-list{
+	float: left;
+	font-size: 0.75rem;
+	li{
+		float: left;
+		padding-right: 0.8rem;
+	}
+}
+.event-rule-box{
+	background: #0071bb;
+	background-image:linear-gradient(black 0.15rem,transparent 0),
+	linear-gradient(90deg,black 0.15rem,transparent 0);
+	background-size:1.5rem 1.5rem;
+	background-position: -0.18rem 0;
+	overflow: hidden;
+}
+.rule-bodi{
+	background-image: url(../images/event-05-17/gzbg-top.png),
+	url(../images/event-05-17/gzbg-bt.png);
+	background-position:0 0,0 bottom;
+	background-color: #feeada;
+	background-repeat: no-repeat;
+	background-size:100% auto;
+	background-origin:border-box;
+	margin:1.5rem 0.5rem 0.5rem;
+	border:0.15rem solid black;
+	position: relative;
+}
+.rule-bodii{
+	border:0.15rem solid black;
+	background-color: #feeada;
+	margin:0.3rem 0.3rem;
+}
+.rule-bodiii{
+	border:0.1rem solid black;
+	margin:0.15rem;
+	background-color: #fff;
+}
+.img-gz-top{
+	position: absolute;
+	width:25%;
+	top:-4%;
+}
+
+.my-award-record{
+	text-align:right;
+	a{
+		border:.15rem solid black;
+		padding:.35rem .8rem;
+		border-radius:1rem;
+	}
+	margin-bottom: 1.8rem;
+}
+.goback-center{
+	text-align:center;
+	padding-top: .75rem;
+	a{
+		border:.15rem solid black;
+		width: 85%;
+		display: inline-block;
+		box-sizing:border-box;
+		padding:.5rem .8rem;
+		border-radius:1rem;
+	}
+}
+.event-container{
+	width:90%;
+	padding:2rem 0;
+	margin:0 auto;
+	font-size: 0.75rem;
+	p{
+		padding: 0.75rem 0;
+		line-height: 1.5;
+		color:black;
+	}
+	li{
+		color:black;
+		text-align: justify;
+	}
+	.ui-list-alpt{
+		padding-left: 1rem;
+		li{
+			list-style-type: lower-alpha;
+		}
+	}
+}
+
+// 
+#loading {
+	display: block;
+	width: 100%;
+	height: 100%;
+
+	background: rgba(255,255,255,0.5);
+
+	position: fixed;
+	top: 0;
+	left: 0;
+
+	img {
+		display: block;
+		margin-top: -27px;
+		margin-left: -99px;
+		width: 198px;
+		height: 54px;
+
+		position: absolute;
+		top: 50%;
+		left: 50%;
+	}
+}
+// 我的获奖记录
+.my-award-recordlist{
+	margin:1.5rem 0.75rem;
+	.record-head{
+		@include displayFlex();
+		display: -webkit-box;
+		.title{
+			text-align: center;
+			&:first-of-type{
+					width: 5rem;
+					img{
+						width: 1.875rem;
+					}
+				}
+			&:nth-child(n+2){
+					@include flex();
+					-webkit-box-flex: 1;
+					img{
+						width: 3.9375rem;
+					}
+				}
+			&:last-of-type{
+				img{
+						width: 2.9375rem;
+					}
+			}
+		}
+	}
+	.scroll-container {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    max-height: 26rem;
+	}
+	.record-list{
+		padding:0.75rem 0;
+		li{
+			@include displayFlex();
+			display: -webkit-box;
+			p{
+				font-size: .75rem;
+				line-height: 2;
+				&:first-of-type{
+					width: 5rem;
+					text-overflow: ellipsis;
+					white-space: nowrap;
+				}
+				&:nth-child(n+2){
+					@include flex();
+					-webkit-box-flex: 1;
+					text-align: center;
+				}
+			}
+		}
+	}
+	a{
+		text-decoration: underline;
+	}
+}

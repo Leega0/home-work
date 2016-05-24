@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <meta name="keywords" content="猪猪钱罐">
+    <meta name="description" content="猪猪钱罐">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telphone=no, email=no"/>
+    <meta name="HandheldFriendly" content="true">
+    <title>我的财富报告</title>
+    <link rel="stylesheet" href="../style/game-03-17.min.css">
+    <script src="../js/lib/fastclick.min.js"></script>
+    <script src="../js/lib/jquery.min.js"></script>
+    <script src="../js/event-01-25-loading.js"></script>
+</head>
+<body class="blue-body" ontouchmove="event.preventDefault()">
+  <div id="loading">
+    <img src="../images/game-03-17/loading-hanmer.gif" alt="">
+  </div>
+  <div id="stage" class="ui-hide">
+  <!-- 游戏资源区 -->
+  <div class="ui-hide">
+  	<img src="../images/game-03-17/animate-start.png" alt="">
+  	<img src="../images/game-03-17/btn-share.png" alt="">
+  	<img src="../images/game-03-17/coin5.png" alt="">
+  	<img src="../images/game-03-17/coin10.png" alt="">
+  	<img src="../images/game-03-17/coin20.png" alt="">
+  	<img src="../images/game-03-17/coin50.png" alt="">
+  	<img src="../images/game-03-17/coin100.png" alt="">
+  	<img src="../images/game-03-17/coinkill.png" alt="">
+  	<img src="../images/game-03-17/hole-up.png" alt="">
+  	<img src="../images/game-03-17/hole-down.png" alt="">
+  	<img src="../images/game-03-17/closed.png" alt="">
+  	<img src="../images/game-03-17/alert-bg.png" alt="">
+  	<img src="../images/game-03-17/alert-coin.png" alt="">
+  	<audio src="../images/game-03-17/hit.mp3" id="hitsound"></audio>
+  </div>
+	<!-- 游戏准备 -->
+	<div class="ui-dialog-wrap">
+      <div class="layer-start"></div>
+      <div class="ui-shade"></div>
+  	</div>
+  	<!-- 游戏主界面 -->
+	<span id="score" class="ui-hide">0</span>
+	<div class="last-time">
+	<img src="../images/game-03-17/game-time.png" alt="" class="time-board">
+		<div class="time"><span id="time">15</span>s</div>
+	</div>
+	<div id="game_stage">
+		<ul>
+			<li><span></span><span></span></li>
+			<li><span></span><span></span></li>
+			<li><span></span><span></span></li>
+			<li><span></span><span></span></li>
+			<li><span></span><span></span></li>
+			<li><span></span><span></span></li>
+			<li><span></span><span></span></li>
+			<li><span></span><span></span></li>
+			<li><span></span><span></span></li>
+		</ul>
+	</div>
+	<!-- 中奖弹窗 -->
+  <div class="lottery-award-dialog ui-hide">
+    <img src="../images/game-03-17/alert-coin.png" class="lottery-def-img" id="lottery_def_img">
+    <p id="lottery_award_content">游戏结束，获得金币：500元</p>
+    <div class="ui-dialog-btnWrap">
+      <a href="javascript:void(0);" class="ui-btn ui-btn-active ui-dialog-btn-submit"></a>
+    </div>
+  </div>
+  </div>
+</body>
+<script src="../js/common.js"></script>
+<script src="../js/game-03-17.js"></script>
+<script>
+$(function() {
+  Fastclick.attach(document.body);
+});
+	// 开始游戏的弹窗
+	var docHeight = $(document).height();
+  	var windHeight = $(window).height();
+  	$(".blue-body").css('height', windHeight);
+    var uiHight = (docHeight>windHeight)?docHeight:windHeight;
+    $(function(){
+    	$(".ui-dialog-wrap,.ui-shade").show();
+	  	$(".ui-dialog-wrap,.ui-shade").css('height', uiHight);
+    });
+	$(".layer-start").on('click',function(){
+	  $(".ui-dialog-wrap,.ui-shade").hide();
+	  GameStart();
+	})
+</script>
+</html>

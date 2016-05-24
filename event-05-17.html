@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  <meta name="keywords" content="猪猪钱罐">
+  <meta name="description" content="猪猪钱罐">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telphone=no, email=no"/>
+  <meta name="HandheldFriendly" content="true">
+  <title>天天抽大奖,存钱加机会</title>
+  <link rel="stylesheet" type="text/css" href="style/event-05-17.min.css">
+  <script src="js/lib/jquery.min.js"></script>
+  <script src="js/event-01-25-loading.js"></script>
+</head>
+<body>
+  <div id="loading">
+    <img src="images/loading-image.gif" alt="">
+  </div>
+
+  <div id="stage" class="ui-hide">
+  	<div class="lottery-top-bg">
+    <div class="lottery-head-img">
+      <img src="images/event-05-17/top-img.png" alt="抽奖页面头部">
+    </div>
+    <!-- 隐藏抽奖次数 -->
+    <span class="ui-hide" id="timeC">1</span>
+    <!-- 抽奖箱体开始 -->
+    <div class="lottery-draw-box-main" id="lottery">
+      <ul class="prize-lotter">
+        <li class="prize-lotter-item prize-number-1" id="167">
+          <img src="images/event-05-17/lottery-prize-1.png" alt="">
+        </li>
+        <li class="prize-lotter-item prize-number-2" id="163">
+          <img src="images/event-05-17/lottery-prize-2.png" alt="">
+        </li>
+        <li class="prize-lotter-item prize-number-3" id="171">
+          <img src="images/event-05-17/lottery-prize-3.png" alt="">
+        </li>
+        <li class="prize-lotter-item prize-number-8" id="162">
+          <img src="images/event-05-17/lottery-prize-8.png" alt="">
+        </li>
+        <li><a href="javascript:void(0)" id="lottery_btn" class="lottery_btn bottery_btn_df"></a></li>
+        <li class="prize-lotter-item prize-number-4" id="164">
+          <img src="images/event-05-17/lottery-prize-4.png" alt="">
+        </li>
+        <li class="prize-lotter-item prize-number-7" id="165">
+          <img src="images/event-05-17/lottery-prize-7.png" alt="">
+        </li>
+        <li class="prize-lotter-item prize-number-6" id="170">
+          <img src="images/event-05-17/lottery-prize-6.png" alt="">
+        </li>
+        <li class="prize-lotter-item prize-number-5" id="166">
+          <img src="images/event-05-17/lottery-prize-5.png" alt="">
+        </li>
+      </ul>
+    </div>
+    <!-- 抽奖箱体end -->
+
+    <!-- 中奖信息滚动 -->
+    <div class="lottery-award-info">
+    	<div class="lottery-award-tree">
+    		<img src="images/event-05-17/top-tree.png" alt="">
+    	</div>
+    	<div class="lottery-award-treeb">
+    	<div class="lottery-award-users" id="award_list_wrap">
+    		<div class="lottery-scroll">
+    			<ul class="award-users-list" id="award_list_origin">
+    				<li>恭喜xxx获得1000特权金;</li>
+    				<li>恭喜xxx获得iphone 6s plus;</li>
+    				<li>恭喜xx获得8元红包;</li>
+    			</ul>
+    			<ul class="award-users-list" id="awrad_list_clone"></ul>
+    		</div>
+    	</div>
+    	</div>
+    </div>
+    </div>
+    <!-- 上部分结束 -->
+    <!-- 活动规则 -->
+    <div class="event-rule-box">
+    	<div class="rule-bodi">
+    	<div class="rule-bodii">
+    	<div class="rule-bodiii">
+      <div class="event-container">
+        <img src="images/event-05-17/hd-gz.png" alt="" class="img-gz-top">
+        <div class="my-award-record">
+        	<a href="">我的获奖记录</a>
+        </div>
+        <ul class="ui-list ui-list-num">
+          <li>注册用户每天至少可抽奖一次，当天增加抽奖次
+    数方法如下：
+    <ul class="ui-list ui-list-alpt">
+    	<li>佣金计划推广人每天抽奖次数 +1次；</li>
+    	<li>单笔存钱金额 ≥ 500元，抽奖次数 + 1次
+    （每天仅赠一次）；</li>
+    	<li>当天每推荐一个好友注册成功，抽奖次数
+     +2次，例如：推荐4个好友注册，抽奖次
+     数+8次；</li>
+    </ul></li>
+          <li>当天抽奖总次数上限为20次；</li>
+          <li>红包有效期：3天，每笔存款限使用1个红包；
+     特权金有效期：8天，按8%年化收益率计息8
+     天，特权金收益次日发放至账户；</li>
+          <li>加息券有效期:5天, 有效期内可使用无数次，
+     不能作用于续投钱罐,最多可分享给 3个好友；</li>
+     <li>流量只支持移动、联通、电信用户充值，赠
+     送流量只在当月有效，抽奖成功后实时充值
+     至用户注册手机号中，手机号码状态必须保
+     持正常。</li>
+        </ul>
+        <p>如有疑问欢迎联系微信在线客服或者拨打<br>客服热线：400-070-7663。</p>
+        <div class="goback-center">
+          <a href="" class="ui-align-center">个人中心</a>
+        </div>
+      </div>
+      </div>
+      </div>
+      </div>
+    </div>
+  </div>
+  <!-- 中奖弹窗 -->
+  <div class="lottery-award-dialog ui-hide">
+  	<div class="lottery-img">
+  		<img src="images/event-05-17/alert-lucky.png" alt="">
+  	</div>
+    <p id="lottery_award_content">恭喜您，获得猪猪大礼包一个。请及时填写收货地址，工作人员将在活动结束后20天内寄送。</p>
+    <div class="ui-dialog-btnWrap">
+      <a href="javascript:void(0);" class="ui-btn ui-btn-whiteBlack ui-dialog-btn-submit"></a>
+    </div>
+  </div>
+</body>
+
+<script src="js/common.js"></script>
+<script type="text/javascript" src="js/event-05-17-lottery.js"></script>
+</html>

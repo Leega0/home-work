@@ -1,0 +1,62 @@
+.subscribe-container{
+	padding:0 1rem;
+}
+.subscribe-list{
+	li{
+		border-bottom: 1px solid #ddd;
+		font-size: .875rem;
+		color: #303030;
+		@include displayFlex();
+        display: -webkit-box;
+        padding: 1rem 0;
+		&:last-of-type{
+			border-bottom:0;
+		}
+		justify-content: space-between;
+	}
+	.subscribe-radio{
+		@include flex();
+    	-webkit-box-flex: 1;
+    	.ui-checkbox,.ui-checkbox-icon{
+    		float: right;
+    	}
+	}
+	.ui-checkbox-help{
+		float: none;
+		display: inline-block;
+		margin-left: .85rem;
+	}
+}
+// 公告信息详情页
+.notice-detail-container{
+	.depositSuccess-content{
+		padding-bottom: 1.6rem;
+	}
+	.notice-icon{
+		width: 3.4rem;
+		&+p{
+			color: #303030;
+		}
+	}
+	.notice-address{
+		font-size: .75rem;
+		color: colors(sub-font);
+		line-height: 1.6;
+		text-align: left;
+	}
+	.detail-signature{
+		@include displayFlex();
+        display: -webkit-box;
+        justify-content: space-between;	
+        padding-top: 1rem;
+        p{
+        	@include flex();
+    		-webkit-box-flex: 1;
+    		font-size: .625rem;
+    		color: colors(assist-font);
+    		&:last-of-type{
+    			text-align: right;
+    		}
+        }
+	}
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  <meta name="keywords" content="猪猪钱罐">
+  <meta name="description" content="猪猪钱罐">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telphone=no, email=no"/>
+  <meta name="HandheldFriendly" content="true">
+  <title>订阅通知</title>
+  <link rel="stylesheet" type="text/css" href="style/main.min.css">
+</head>
+
+<body>
+<div class="ui-container">
+	<div class="item-container subscribe-container">
+		<!-- sublist -->
+		<ul class="subscribe-list">
+			<li><p>额度通知</p><a id="commissionHelpBtn" href="javascript:void(0);" class="ui-checkbox-help"></a>
+				<div class="subscribe-radio">
+					<input class="ui-checkbox" type="checkbox"/>
+				</div>
+			</li>
+			<li>
+				<p>月报通知</p>
+				<a id="" href="javascript:void(0);" class="ui-checkbox-help"></a>
+				<div class="subscribe-radio">
+					<input class="ui-checkbox" type="checkbox"/>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>
+<ul class="account-nav month-fixed-bottom">
+      <li><a href="#">猪猪钱罐</a></li>
+      <li><a href="#">安全保障</a></li>
+      <li><a href="#">常见问题</a></li>
+      <li><a href="#">个人中心</a></li>
+</ul>
+<!--特权金使用说明弹窗-->
+  <div class="deposit-prize-help ui-hide">
+    <h3 class="ui-dialog-title">额度通知</h3>
+    <ul class="ui-list">
+      <li>如您将存入的额度高于剩余额度，猪猪将在下次提升额度时，通过微信消息通知您。
+      </li>
+    </ul>
+  </div>
+<script src="js/lib/zepto.min.js"></script>
+<script src="js/common.js"></script>
+<script>
+	var $commissionHelpBtn = $('#commissionHelpBtn');
+	$commissionHelpBtn.on('click', function() {
+    $.dialog('.deposit-prize-help');
+  });
+
+</script>
+</body>
+</html>

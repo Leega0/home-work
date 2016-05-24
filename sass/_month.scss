@@ -1,0 +1,42 @@
+.month-calendar-table{
+	background-color: #fff;
+	margin:.725rem 0.5rem 0;
+	box-shadow:0 5px 10px rgba(147, 177, 216, 0.5);
+	dt{
+		text-align: center;
+		color: colors(sub-font);
+		font-size: 0.875rem;
+		line-height: 3.14;
+		border-bottom:1px solid #eff1f4;
+	}
+	dd{
+		@include displayFlex();
+		display: -webkit-box;
+		font-size: 0.75rem;
+		a{
+			display: block;
+			@include flex();
+			-webkit-box-flex: 1;
+			text-align: center;
+			line-height: 5.8;
+			width: 1%;
+			background-color: #f9f9f9;
+			color:#c6c6c6;
+			border-bottom:1px solid #eff1f4;
+			border-right:1px solid #eff1f4;
+			&:last-of-type{
+				border-right:0;
+			}
+			&.month-report-item{
+				background-color: #fff;
+				color:#303030;
+			}
+		}
+	}
+}
+.month-fixed-bottom{
+	position: fixed;
+	width:100%;
+	bottom:0;
+	left:0;
+}

@@ -1,0 +1,296 @@
+@import "variables";
+@import "function";
+@import "reset";
+@import "base";
+.blue-body{
+	background-color: #32cadf;
+}
+// 游戏欢迎页
+.game-container{
+	background-image: url("../images/game-03-17/welcome-wrap.png");
+	background-repeat:no-repeat;
+	background-size:cover;
+	padding-bottom: 90%;
+	.content-seat{
+		width: 100%;
+		padding-top: 115%;
+		margin-bottom: 1rem;
+		position: relative;
+		.to-myrecord{
+		position: absolute;
+		right: 10%;
+		bottom: -35%;
+		color: #21264b;
+	}
+	}
+	.btn-welcom-start{
+		display: block;
+		box-sizing:border-box;
+		margin: 1.5rem auto;
+		background: url(../images/game-03-17/btn-start.png) no-repeat;
+		background-size:200%;
+		width: 18rem;
+		height:3.65rem;
+		&:active{
+			background-position:right;
+		}
+	}
+}
+.ui-dialog{
+	.ui-dialog-btnWrap{
+		.ui-btn-know{
+			border:0;
+			background:url(../images/game-03-17/btn-know.png) no-repeat;
+			background-size:200% 100%;
+			margin: 0 auto;
+			width: 70%;
+			height: 4.255rem;
+			&:active{
+			background-position:right;
+			}
+		}
+	}
+}
+// 游戏页面
+#loading{
+	position: absolute;
+	z-index:999;
+	width:102px;
+	height:37px;
+	left:50%;
+	top:50%;
+	margin-left: -51px;
+	margin-top: -19px;
+	img{
+		width: 100%;
+	}
+}
+.layer-start{
+	width:134px;
+	height:124.5px;
+	position: absolute;
+	z-index:999;
+	top:50%;
+	margin-top:-70px;
+	margin-left: -50px;
+	left:50%;
+	background: url(../images/game-03-17/animate-start.png) no-repeat;
+	background-size:200%;
+	background-position:0 0;
+	animation:hit 1s steps(2,end) infinite;
+}
+@keyframes hit{
+	to{
+		background-position:200% 0;
+	}
+}
+.last-time{
+	position: relative;
+	.time-board{
+		width: 100%;
+	}
+	.time{
+		position: absolute;
+		z-index: 9;
+		font-size: 1.875rem;
+		font-weight: bold;
+		&>span{
+		font-weight: bold;	
+		}
+		color: #21264b;
+		top:30%;
+		left: 20%;
+	}
+}
+#game_stage{
+	width:306px;
+	height:306px;
+	margin:1rem auto;
+	ul{
+		display: block;
+		float: left;
+		li{
+			display: block;
+			float: left;
+			width: 102px;
+			height: 102px;
+			overflow: hidden;
+			position: relative;
+			text-align: center;
+			span:first-of-type{
+				display: block;
+				position: relative;
+				// position: absolute;
+				// z-index: -99;
+				overflow: hidden;
+				left: 5px;
+				top: 0;
+				width: 93px;
+				height: 89px;
+				background: url(../images/game-03-17/hole-up.png) no-repeat;
+				background-size:100%;
+				div{
+					background-size: 100% !important;
+				}
+			}
+			span:last-of-type{
+				display: block;
+				position: relative;
+				left: 5px;
+				bottom:0;
+				width: 93px;
+				height: 13px;
+				background: url(../images/game-03-17/hole-down.png) no-repeat;
+				background-size:100%;
+			}
+		}
+	}
+}
+.ui-dialog{
+	background: url(../images/game-03-17/alert-bg.png) no-repeat;
+	background-size:100% 100%;
+	.ui-dialog-close{
+		width: 2.85rem;
+		height: 3.1rem;
+		background:url(../images/game-03-17/closed.png);
+		background-size:2.85rem;
+		top: -1rem;
+		right: -1rem;
+	}
+	.lottery-def-img{
+		width: 5rem;
+		position: relative;
+		display: block;
+		margin: 0 auto;
+		top: -2rem;
+	}
+	p{
+		font-size: 0.875rem;
+		text-align: center;
+		line-height: 1.6;
+		box-sizing:border-box;
+		padding: 0 1rem;
+	}
+	.ui-dialog-btnWrap{
+		border:0;
+		margin-bottom: 0.2rem;
+		.ui-btn-active{
+			border:0;
+			background:url(../images/game-03-17/btn-share.png) no-repeat;
+			background-size:200% 100%;
+			margin: 0 auto;
+			width: 80%;
+			height: 4.255rem;
+			&:active{
+				background-position: right;
+			}
+		}
+	}
+}
+// 游戏结果页
+.common-share-head{
+	position:relative;
+	.common-share-bg{
+		width: 100%;
+	}
+	.level-img{
+		position: absolute;
+		z-index: 9;
+		width: 40%;
+		top: 1rem;
+		left: 0.5rem;
+	}
+	.common-share-img{
+		position: absolute;
+		z-index: 9;
+		width: 55%;
+		top: 0.35rem;
+		right: 2rem;
+	}
+}
+.common-share-result{
+	padding-top: 2.75rem;
+	.result-txt{
+		text-align: center;
+		line-height: 1.6;
+		min-height: 3.15rem;
+	}
+	.result-detail{
+		width: 18.8rem;
+		height: 10.4rem;
+		margin: 1rem auto;
+		background: url(../images/game-03-17/award-results.png) no-repeat;
+		background-size: 100%;
+		box-sizing:border-box;
+		padding-top: 0.8rem;
+		padding-left:3.75rem;
+		dd{
+			span{
+				display:inline-block;
+				font-size: 0.875rem;
+				width: 55%;
+				&.result-flex{
+					width: 45%;
+				}
+				line-height: 3.125rem;
+			}
+		}
+	}
+	.result-btn{
+		display: block;
+		box-sizing:border-box;
+		margin: 1.5rem auto;
+		background: url(../images/game-03-17/btn-goback.png) no-repeat;
+		background-size:200%;
+		width: 10rem;
+		height:3.5rem;
+		&:active{
+			background-position:right;
+		}
+	}
+}
+// 获奖记录
+.lottery-record-bg {
+  background-image: url(../images/game-03-17/awrad-record.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  margin: 1rem 0.5rem;
+ }
+
+.my-award-record {
+  padding: 1rem 0;
+  box-sizing: border-box;
+  width: 16.5rem;
+  margin: 0 auto;
+  padding-top: 6rem;
+}
+.scroll-container{
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  height: 25.5rem;
+  padding-bottom: 1rem;
+}
+.record-list {
+  font-size: 0.75rem;
+  color: #000;
+  padding-top: 0.5rem; }
+
+.record-list li {
+	@include displayFlex();
+	display: -webkit-box;
+	padding: 0.5rem 0; 
+	span {
+		display: block;
+		&:first-of-type {
+		@include flex();
+		-webkit-box-flex: 1;
+			text-align: left;
+				padding-left: 1rem;
+			}
+		&:last-of-type {
+			padding-left: 0.5rem;
+			padding-right: 1rem;
+		}
+	}
+}

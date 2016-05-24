@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  <meta name="keywords" content="猪猪钱罐">
+  <meta name="description" content="猪猪钱罐">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telphone=no, email=no"/>
+  <meta name="HandheldFriendly" content="true">
+  <title>天天抽奖，存钱加机会</title>
+  <link rel="stylesheet" type="text/css" href="style/daydaylottery.min.css">
+  <script src="js/lib/jquery.min.js"></script>
+  <script src="js/event-01-25-loading.js"></script>
+</head>
+<body>
+  <div id="loading">
+    <img src="images/loading-image.gif" alt="">
+  </div>
+
+  <div id="stage" class="ui-hide">
+  <!-- 隐藏抽奖次数 -->
+  <span class="ui-hide" id="timeC">1</span>
+  <!-- 活动抽奖页上半部分 -->
+  <div class="lottery-up">
+      <div class="lottery-head-img">
+        <div class="lottery-top-place"></div>
+        <img src="images/event-03-11/lottery-anim-head.png"  class="lottery-animation-text" alt="抽奖页面头部">
+      </div>
+      <!-- 抽奖主体 -->
+      <div class="lottery-main">
+          <div class="lottery-bg">
+              <div class="lottery-rotate">
+                  <img src="images/event-03-11/lottery-awards.png" alt="抽奖转盘" id="lottery-rotate">
+              </div>
+              <img src="images/event-03-11/lottery-btn.png" alt="抽奖按钮" class="lottery-btn">
+          </div>
+      </div>
+  </div>
+  <!-- 活动抽奖页下半部分 -->
+  <div class="lottery-down">
+    <!-- 中奖信息滚动 -->
+    <div class="lottery-award-bg">
+    <div class="lottery-award-users" id="award_list_wrap">
+      <div class="lottery-scroll">
+        <ul class="award-users-list" id="award_list_origin">
+          <li>恭喜xxx获得1000特权金;</li>
+          <li>恭喜xxx获得iphone 6s plus;</li>
+          <li>恭喜xx获得8元红包;</li>
+        </ul>
+        <ul class="award-users-list" id="awrad_list_clone"></ul>
+      </div>
+    </div>
+    </div>
+    <p class="ui-align-center ui-mb5">
+      <a href="" class="ui-link">我的获奖记录</a>
+    </p>
+    <!-- 活动规则 -->
+    <div class="event-rule-box">
+      <div class="event-container">
+        <h3 class="ui-text-title"><img src="images/event-03-11/lottery-rule-title.png" alt=""></h3>
+        <ul class="ui-list ui-list-num">
+          <li>活动期间所有注册用户均可参与抽奖，每个用户每天至少可抽奖1次；分享页面给好友抽奖次数+1;当天单笔存钱金额≥1000元，抽奖次数+1；</li>
+          <li>虚拟类产品实时发放至用户猪猪账户；</li>
+          <li>流量只支持移动、联通、电信用户充值，赠送的流量只在当月有效，抽奖成功后实时充值至用户注册手机号中，活动期间手机号码状态必须保持正常；</li>
+          <li>获得存就送机会的用户，3日有效期内可进入存就送页面，存入相应的存款金额即可获得对应商品。</li>
+        </ul>
+        <p>如有疑问请联系微信在线客服或拨打<br>400-070-7663</p>
+      </div>
+    </div>
+    </div>
+  </div>
+  <!-- 中奖弹窗 -->
+  <div class="lottery-award-dialog ui-hide">
+    <img src="images/event-03-11/lottery-win.png" class="lottery-def-img" id="lottery_def_img">
+    <p id="lottery_award_content">恭喜您，获得68元红包1个。有效期3天，最晚可使用日期：2016年3月12日。</p>
+    <div class="ui-dialog-btnWrap">
+      <a href="javascript:void(0);" class="ui-btn ui-btn-active ui-dialog-btn-submit">立即使用</a>
+    </div>
+  </div>
+  <script src="js/common.js"></script>
+  <script type="text/javascript" src="js/event-03-11.js"></script>
+</body>
+</html>

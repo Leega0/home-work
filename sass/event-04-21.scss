@@ -1,0 +1,271 @@
+@import "variables";
+@import "function";
+@import "reset";
+@import "base";
+.event-img-items{
+	position: relative;
+	img{
+		width: 100%;
+		display: block;
+	}
+	.event-btn-wrap{
+		position: absolute;
+		bottom: 0.5rem;
+		width: 100%;
+		.btn-start-save{
+			display: block;
+		    box-sizing: border-box;
+		    margin: 1.5rem auto;
+		    background: url(../images/event-04-21/btn-start-save.png) no-repeat;
+		    background-size: 200%;
+		    width: 14.75rem;
+		    height: 3.65rem;
+		    &:active{
+		    	background-position: right;
+		    }
+		}
+	}
+}
+// 领加息券
+.event-wrap{
+	width:100%;
+	background: url(../images/event-04-21/event-common-bg.png) no-repeat;
+	background-size:100% 100%;
+	overflow: hidden;
+}
+.btn-geticket{
+			display: block;
+		    box-sizing: border-box;
+		    margin: 5rem auto 1rem;
+		    background: url(../images/event-04-21/btn-get-ticket.png) no-repeat;
+		    background-size: 200%;
+		    width: 14.75rem;
+		    height: 3.65rem;
+		    &:active{
+		    	background-position: right;
+		    }
+		}
+.event-increase-rule{
+	margin:0 2rem;
+	dt{
+		color:#110dd4;
+		font-size: 0.75rem;
+		padding-bottom: 0.5em;
+	}
+	.ui-list{
+		li{
+			color:#110dd4;
+		}
+	}
+}
+.get-record-wrap{
+	margin: 0.5rem;
+	padding:2rem 1rem 1rem;
+	font-size: 0.75rem;
+	color:#110dd4;
+	background: url(../images/event-04-21/geter-bg.png) no-repeat;
+	min-height:11.25rem;
+	background-size:100% 100%;
+	.get-tickets-box{
+		@include displayFlex();
+		display: -webkit-box;
+		padding: 0.5rem 0;
+		border-bottom:2px dotted #1b17d6;
+		&:last-child{
+			border-bottom:0;
+		}
+		.head-img-box{
+			width: 2.5rem;
+			height: 2.5rem;
+			background: url(../images/event-04-21/img-header-bg.png) no-repeat;
+			background-size:100% 100%;
+			overflow: hidden;
+
+			img{
+				display: block;
+				width: 75%;
+				border-radius:100%;
+				margin-top: 0.3rem;
+				margin-left: 0.375rem;
+			}
+		}
+		dd{
+			@include flex();
+			-webkit-box-flex: 1;
+			line-height: 2.5rem;
+			text-indent: 0.75rem;
+		}
+		.geter-record-box{
+			width: 100%;
+			text-align:right;
+			padding-top:0.35rem;
+			.geter-record{
+				display: inline-block;
+				line-height: 1.6;
+			}
+		}
+	}
+}
+// 加息券详情
+.tickets-detail{
+	margin:2.75rem auto 0;
+	width:11.75rem;
+	height:8.9rem;
+	background: url(../images/event-04-21/tickets-bg.png) no-repeat;
+	background-size:100%;
+	color: #fff;
+	dt{
+		font-size: 3.4rem;
+		font-weight: bold;
+		padding:2rem 0 1.8rem;
+		em{
+			font-size: 1.25rem;
+		}
+	}
+	dd{
+		font-size: 0.875rem;
+		color: #110dd4;
+	}
+}
+.tickets-info{
+	width:75%;
+	margin:0 auto;
+	padding-top: 0.5rem;
+	img{
+		width: 100%;
+		&.tickets-share-img{
+			width: 35%;
+			display: block;
+			margin: 0 auto;
+			position: relative;
+			top: 0.5rem;
+		}
+	}
+	.tickets-has{
+		color: #ff335e;
+		font-size: 0.75rem;
+		padding:1rem 0 1.75rem;
+	}
+}
+// 加息券列表
+.tickets-list{
+	margin:1rem 0.5rem;
+	li{
+		height: 5rem;
+		margin-bottom: 0.35rem;
+		@extend %shadow;
+		background-color:#fff;
+		@include displayFlex();
+		display: -webkit-box;
+		.tickets-center-status{
+			@include flex();
+			-webkit-box-flex: 1;
+			position: relative;
+			overflow: hidden;
+			img{
+				position: absolute;
+				top:1.5rem;
+				width: 5.625rem;
+				right: 0.5rem;
+			}
+		}
+		.tickets-left{
+			padding-left: 1rem;
+			padding-top: 1rem;
+		}
+		.tickets-right{
+			width: 6.25rem;
+			background: url(../images/event-04-21/tickets-valid-bg.png) no-repeat;
+			background-size:100%;
+			background-position:center;
+		}
+		.tickets-rate{
+			font-size: 1.625rem;
+			color: colors(main);
+			padding-bottom: 0.625rem;
+			em{
+				font-size: 1rem;
+			}
+		}
+		.tickets-led{
+			font-size: 0.625rem;
+			color: colors(assist-font);
+		}
+		.tickets-status{
+			font-size: 1.25rem;
+			padding:1.25rem 0 0.5rem;
+			text-align:left;
+			text-indent: 0.625rem;
+			&:after{
+				content: '领';
+				display: inline-block;
+				width: 1.125rem;
+				height: 1.125rem;
+				line-height: 1.125rem;
+				vertical-align: middle;
+				text-align: center;
+				text-indent: 0;
+				position: relative;
+				font-size: 0.625rem;
+				left: 0.5rem;
+				top: -0.025rem;
+				border:1px dotted #fff;
+				border-radius:100%;
+			}
+			&.status-source-save{
+				&:after{
+					content: '存';
+				}
+			}
+			&.status-source-lottery{
+				&:after{
+					content: '抽';
+				}
+			}
+		}
+		.tickets-date{
+			font-size: 0.625rem;
+		}
+		// 无效
+		&.invalid{
+			.tickets-right{
+				background: url(../images/event-04-21/tickets-invalid-bg.png) no-repeat;
+				background-size:100%;
+				background-position:center;
+			}
+			.tickets-rate{
+				color: #303030;
+			}
+		}
+	}
+}
+// 空白页面
+.tickets-detail-content{
+	margin-top: 1rem;
+    padding: 2rem;
+    background-color: #fff;
+    @extend %shadow;
+    img{
+    	width: 38%;
+    }
+    p{
+    	font-size: 0.875rem;
+    	padding-top: 1rem;
+    	color: colors(sub-font);
+    }
+}
+// 返回个人中心按钮
+.goback-btn-wrap{
+	.btn-goback-center{
+		display: block;
+		box-sizing:border-box;
+		margin: 1.5rem auto;
+		background: url(../images/event-04-21/btn-goback-center.png) no-repeat;
+		background-size:200%;
+		width: 14.75rem;
+		height: 3.65rem;
+		&:active{
+			background-position:right;
+		}
+	}
+}
